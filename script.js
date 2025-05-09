@@ -132,50 +132,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Counter Animation
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16); // ~60fps
-    const counter = element.querySelector('.counter');
+    function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16); // ~60fps
+        const counter = element.querySelector('.counter');
 
-    function updateCounter() {
-        start += increment;
-        if (start < target) {
-            counter.textContent = Math.floor(start) + '+';
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.textContent = target + '+';
+        function updateCounter() {
+            start += increment;
+            if (start < target) {
+                counter.textContent = Math.floor(start) + '+';
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target + '+';
+            }
         }
+
+        updateCounter();
     }
 
-    updateCounter();
-}
+    // Initialize counters when they come into view
+    const counterItems = document.querySelectorAll('.counter-item');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target.querySelector('.counter');
+                const textValue = counter.textContent.trim();
+                const target = parseInt(textValue.replace('+', '')) || 0;
+                animateCounter(entry.target, target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
 
-// Initialize counters when they come into view
-const counterItems = document.querySelectorAll('.counter-item');
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target.querySelector('.counter');
-            const textValue = counter.textContent.trim();
-            const target = parseInt(textValue.replace('+', '')) || 0;
-            animateCounter(entry.target, target);
-            counterObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-counterItems.forEach(item => counterObserver.observe(item));
-
-// Remove or modify the calculateEnvironmentalImpact function since we're using static values
-function calculateEnvironmentalImpact() {
-    // This function is no longer needed since we're using the static values from HTML
-    // But if you want to keep it for future use, you can leave it empty
-}
-
-// Call environmental impact calculator (optional)
-calculateEnvironmentalImpact();
-
-    
+    counterItems.forEach(item => counterObserver.observe(item));
 
     // Team member hover effect
     const teamMembers = document.querySelectorAll('.team-member');
@@ -257,22 +246,6 @@ calculateEnvironmentalImpact();
     }, { threshold: 0.1 });
 
     fadeElements.forEach(el => fadeObserver.observe(el));
-
-    // Environmental Impact Calculator
-    function calculateEnvironmentalImpact() {
-        const booksRecycled = 5000; // Example number
-        const treesPerBook = 0.1; // Approximate number of trees saved per book
-        const paperWasteSaved = booksRecycled * 0.5; // Kg of paper waste saved (example calculation)
-
-        // Update impact counters
-        document.querySelector('.counter-item:nth-child(2) .counter').textContent =
-            Math.round(booksRecycled * treesPerBook) + '+';
-
-        // You can add more environmental impact calculations here
-    }
-
-    // Call environmental impact calculator
-    calculateEnvironmentalImpact();
 
     // Add scroll-to-top button
     const scrollTopButton = document.createElement('button');
