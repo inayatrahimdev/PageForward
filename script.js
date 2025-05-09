@@ -132,38 +132,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Counter Animation
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16); // 60fps
-        const counter = element.querySelector('.counter');
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16); // ~60fps
+    const counter = element.querySelector('.counter');
 
-        function updateCounter() {
-            start += increment;
-            if (start < target) {
-                counter.textContent = Math.floor(start) + '+';
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target + '+';
-            }
+    function updateCounter() {
+        start += increment;
+        if (start < target) {
+            counter.textContent = Math.floor(start) + '+';
+            requestAnimationFrame(updateCounter);
+        } else {
+            counter.textContent = target + '+';
         }
-
-        updateCounter();
     }
 
-    // Initialize counters when they come into view
-    const counterItems = document.querySelectorAll('.counter-item');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target.querySelector('.counter');
-                const target = parseInt(counter.textContent);
-                animateCounter(entry.target, target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
+    updateCounter();
+}
 
-    counterItems.forEach(item => counterObserver.observe(item));
+// Initialize counters when they come into view
+const counterItems = document.querySelectorAll('.counter-item');
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target.querySelector('.counter');
+            const textValue = counter.textContent.trim();
+            const target = parseInt(textValue.replace('+', '')) || 0;
+            animateCounter(entry.target, target);
+            counterObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+counterItems.forEach(item => counterObserver.observe(item));
+
+
+    
 
     // Team member hover effect
     const teamMembers = document.querySelectorAll('.team-member');
