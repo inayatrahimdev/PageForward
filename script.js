@@ -166,6 +166,14 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counterItems.forEach(item => counterObserver.observe(item));
 
+// Remove or modify the calculateEnvironmentalImpact function since we're using static values
+function calculateEnvironmentalImpact() {
+    // This function is no longer needed since we're using the static values from HTML
+    // But if you want to keep it for future use, you can leave it empty
+}
+
+// Call environmental impact calculator (optional)
+calculateEnvironmentalImpact();
 
     
 
