@@ -18,7 +18,11 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>PageForward</h1>
+                <img src="Logo.png" alt="PageForward Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>PageForward</h1>
+                    <span class="logo-tagline">Read, Reuse, Rise</span>
+                </div>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -43,17 +47,15 @@
                 <h1>Every child deserves a chance to turn the page toward a better future</h1>
                 <p>Join us in creating a sustainable future through education</p>
                 <div class="cta-buttons">
-                    <a href="https://forms.gle/RczNC9js3a6ynYSB6"
-                        class="primary-button"
+                    <a href="https://forms.gle/1TnintsxEZREvfqL6" class="primary-button"
                         style="pointer-events: auto !important; z-index: 100 !important; position: relative !important; display: inline-block !important;"
                         target="_blank" onclick="return true;">Donate Books</a>
-                    <a href="https://forms.gle/UvaBJJU4RkQny4kP8"
-                        class="secondary-button"
+                    <a href="https://forms.gle/wTBsNfQTcVXtKdqo8" class="secondary-button"
                         style="pointer-events: auto !important; z-index: 100 !important; position: relative !important; display: inline-block !important;"
                         target="_blank" onclick="return true;">Become a Volunteer</a>
                     <a href="https://forms.gle/LeDorPLgUH9xrAD46" class="get-books-button"
-    style="pointer-events: auto !important; z-index: 100 !important; position: relative !important; display: inline-block !important;"
-    target="_blank">Get Books</a>
+                        style="pointer-events: auto !important; z-index: 100 !important; position: relative !important; display: inline-block !important;"
+                        target="_blank">Get Books</a>
                 </div>
             </div>
         </div>
@@ -303,20 +305,17 @@
                 <div class="involvement-card">
                     <h3>Donate Books</h3>
                     <p>Give your books a second life and help a student in need.</p>
-                    <a href="https://docs.google.com/forms/d/1FbR6VkDmpN1LNHejCtqZr95imaAs36o89k4JgpF95eg/"
-                        class="action-button" target="_blank">Donate Now</a>
+                    <a href="https://forms.gle/1TnintsxEZREvfqL6" class="action-button" target="_blank">Donate Now</a>
                 </div>
                 <div class="involvement-card">
                     <h3>Volunteer</h3>
                     <p>Join our team and be part of the change.</p>
-                    <a href="https://docs.google.com/forms/d/1jkwnVLlTI0vM1XzuYzGLerDMrpCFbiz4U2cF9wjfSPU/"
-                        class="action-button" target="_blank">Join Us</a>
+                    <a href="https://forms.gle/wTBsNfQTcVXtKdqo8" class="action-button" target="_blank">Join Us</a>
                 </div>
                 <div class="involvement-card">
                     <h3>Financial Support</h3>
                     <p>Support our mission with a monetary contribution.</p>
-                    <a href="https://docs.google.com/forms/d/1NpIAit1fxiwoVT-iIRkNaEQnERc7EJJQk3F78LPQU9Y/"
-                        class="action-button" target="_blank">Contribute</a>
+                    <a href="https://forms.gle/hUbZeatBDxinE3tA6" class="action-button" target="_blank">Contribute</a>
                 </div>
             </div>
         </div>
@@ -364,9 +363,18 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>PageForward</h3>
-                    <p>Read, Reuse, Rise</p>
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="Logo.png" alt="PageForward Logo" class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <h3>PageForward</h3>
+                            <p> Read, Reuse, Rise</p>
+                            <div class="brand-years">
+                                <span class="years-badge">Est. 2024</span>
+                                <span class="mission-text">1+ Years of Impact</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -397,10 +405,53 @@
         </div>
     </footer>
 
+    <!-- AI Chatbot -->
+    <div id="chatbot-container">
+        <div id="chatbot-toggle">
+            <i class="fas fa-robot"></i>
+            <span class="chatbot-text">ASK PAGEFORWARD AI ASSISTANT</span>
+        </div>
+        <div id="chatbot-window">
+            <div id="chatbot-header">
+                <h3>PageForward AI Assistant</h3>
+                <button id="chatbot-close">&times;</button>
+            </div>
+            <div id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>👋 Hello! I'm the PageForward AI Assistant. I can help you</p>
+                        <ul>
+                        </ul>
+                        <p>What would you like to know?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="chatbot-input-container">
+                <input type="text" id="chatbot-input" placeholder="Type your question here...">
+                <button id="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get Books Modal -->
+    <div id="bookCategoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGetBooksModal()">&times;</span>
+            <h2>Get Books - PageForward</h2>
+            <p>Request free educational books from PageForward. Fill out the details below to let us know what type of
+                books you need and where you want them delivered.</p>
+            <p>📌 Your information will remain confidential and only be used to fulfill your request.</p>
+            <p><strong>Page Forward Official Email:</strong> pageforwardnonprofit@gmail.com<br>
+                <strong>Contact:</strong> +92 3318955500
+            </p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8example/viewform?embedded=true" width="100%"
+                height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
