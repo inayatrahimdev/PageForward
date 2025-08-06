@@ -152,7 +152,8 @@ p {
 }
 
 .primary-button,
-.secondary-button {
+.secondary-button,
+.get-books-button {
     padding: 1rem 2rem;
     border-radius: 5px;
     text-decoration: none;
@@ -173,6 +174,18 @@ p {
 
 .primary-button:hover,
 .secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+.get-books-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.get-books-button:hover {
+    background-color: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
 }
 
