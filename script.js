@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actions: ["Volunteer Form", "Volunteer Roles", "Time Commitment"]
         },
         "environmental impact": {
-            response: "Our environmental impact includes:\n\n🌳 **Trees Saved**: 50+ trees saved through book reuse\n♻️ **Waste Reduction**: Reducing paper waste significantly\n🌱 **Sustainable Practices**: Promoting eco-friendly education\n🌍 **Awareness**: Building environmental consciousness in communities\n\nEvery book we save contributes to a greener planet!",
+            response: "Our environmental impact includes:\n\n🌳 **Trees Saved**: 20+ trees saved through book reuse\n♻️ **Waste Reduction**: Reducing paper waste significantly\n🌱 **Sustainable Practices**: Promoting eco-friendly education\n🌍 **Awareness**: Building environmental consciousness in communities\n\nEvery book we save contributes to a greener planet!",
             actions: ["Our Stats", "How It Works", "Join Movement"]
         },
         "contact": {
@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actions: ["Send Message", "Follow Social Media", "Visit Office"]
         },
         "stats": {
-            response: "Our current impact:\n\n📚 **100+** Books Redistributed\n🌳 **50+** Trees Saved\n🎓 **75+** Students Helped\n📓 **200+** Notebooks Recycled\n\nThese numbers grow every day thanks to our amazing community support!",
+            response: "Our current impact:\n\n📚 **10+** Books Redistributed\n🌳 **20+** Trees Saved\n🎓 **10+** Students Helped\n📓 **10+** Notebooks Recycled\n\nThese numbers grow every day thanks to our amazing community support!",
             actions: ["Environmental Impact", "Help Grow Stats", "Share Impact"]
         },
         "president message": {
@@ -607,3 +607,4 @@ document.addEventListener('DOMContentLoaded', function () {
     window.closeGetBooksModal = closeGetBooksModal;
     window.chatbot = chatbot;
 });
+
