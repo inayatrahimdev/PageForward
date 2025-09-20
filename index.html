@@ -7,6 +7,12 @@
     <meta name="description"
         content="PageForward - Empowering education through sustainable book sharing and recycling">
     <title>PageForward - Read, Reuse, Rise</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="shortcut icon" type="image/png" href="Logo.png">
+    <link rel="apple-touch-icon" href="Logo.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -28,6 +34,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#impact">Our Impact</a></li>
+                <li><a href="#books-available">Books Available</a></li>
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
                 <li><a href="#contact" class="cta-button">Contact Us</a></li>
@@ -264,6 +271,102 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Available for Donation Section -->
+    <section id="books-available" class="books-available">
+        <div class="container">
+            <h2>Books Available for Donation</h2>
+            <p class="section-subtitle">Discover our collection of educational books ready to find new homes and inspire
+                new minds</p>
+
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="Atomic Habit.jpg" alt="Atomic Habits by James Clear">
+                        <div class="book-overlay">
+                            <div class="book-actions">
+                                <button class="request-btn" onclick="requestBook('Atomic Habits')">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    Request Book
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Atomic Habits</h3>
+                        <p class="book-author">by James Clear</p>
+                        <p class="book-category">Self-Development</p>
+                        <p class="book-description">An easy and proven way to build good habits and break bad ones. This
+                            book offers a framework for improving daily through small changes that compound into
+                            remarkable results.</p>
+                        <div class="book-status">
+                            <span class="status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="Poor Economics.jpg" alt="Poor Economics by Abhijit V. Banerjee and Esther Duflo">
+                        <div class="book-overlay">
+                            <div class="book-actions">
+                                <button class="request-btn" onclick="requestBook('Poor Economics')">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    Request Book
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Poor Economics</h3>
+                        <p class="book-author">by Abhijit V. Banerjee & Esther Duflo</p>
+                        <p class="book-category">Economics & Development</p>
+                        <p class="book-description">A revolutionary approach to understanding global poverty through
+                            rigorous field experiments. This Nobel Prize-winning work challenges conventional wisdom
+                            about poverty alleviation.</p>
+                        <div class="book-status">
+                            <span class="status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="Sapiens.jpg" alt="Sapiens by Yuval Noah Harari">
+                        <div class="book-overlay">
+                            <div class="book-actions">
+                                <button class="request-btn" onclick="requestBook('Sapiens')">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    Request Book
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Sapiens</h3>
+                        <p class="book-author">by Yuval Noah Harari</p>
+                        <p class="book-category">History & Anthropology</p>
+                        <p class="book-description">A fascinating exploration of how Homo sapiens came to dominate the
+                            world. This book examines the cognitive, agricultural, and scientific revolutions that
+                            shaped human civilization.</p>
+                        <div class="book-status">
+                            <span class="status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="books-cta">
+                <h3>Have More Books to Donate?</h3>
+                <p>We're always looking for quality educational books to add to our collection. Help us expand our
+                    library and reach more students.</p>
+                <a href="https://forms.gle/1TnintsxEZREvfqL6" class="donate-books-btn" target="_blank">
+                    <i class="fas fa-book"></i>
+                    Donate Your Books
+                </a>
             </div>
         </div>
     </section>
