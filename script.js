@@ -1,3 +1,9 @@
+// Book Request Function
+function requestBook(bookTitle) {
+    // Redirect directly to the Google Form for getting books
+    window.open('https://forms.gle/LeDorPLgUH9xrAD46', '_blank');
+}
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Navigation Toggle
